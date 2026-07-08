@@ -3,13 +3,15 @@
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .hero-img { height: 100vh; width: 100%; object-fit: cover; }
+        .hero-img { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100vh; 
+            object-fit: cover; transition: opacity 1.5s ease-in-out; 
+        }
         .glass-nav { background: rgba(2, 6, 23, 0.6); backdrop-filter: blur(10px); }
     </style>
 </head>
 <body class="bg-[#020617] text-white font-sans">
 
-    <!-- Navigation Overlay -->
     <nav class="glass-nav fixed top-0 z-50 w-full px-12 py-8 flex justify-between items-center">
         <div class="text-2xl font-bold tracking-[0.2em]">AIM MOTORS 
             <span class="text-[10px] text-cyan-500 block uppercase tracking-[0.4em]">Sovereign Autonomous Intelligence</span>
@@ -21,13 +23,14 @@
         </div>
     </nav>
 
-    <!-- Hero Section: Full Browser Takeover -->
     <section id="hero" class="relative h-screen w-full overflow-hidden">
-        <!-- You can cycle these via JS, or keep as a single striking PNG -->
-        <img src="hero_assembly_line.png" class="hero-img" alt="Production Line">
+        <img src="hero_assembly_line.png" class="hero-img opacity-100" alt="Assembly Line">
+        <img src="hero_tech_render.png" class="hero-img opacity-0" alt="Tech Render">
+        <img src="hero_interior_cockpit.png" class="hero-img opacity-0" alt="Interior">
+        <img src="hero_blueprint_specs.png" class="hero-img opacity-0" alt="Blueprint">
+        <img src="hero_urban_lifestyle.png" class="hero-img opacity-0" alt="Urban Life">
     </section>
 
-    <!-- Content Sections (Appears on Scroll) -->
     <main class="relative z-10 bg-[#020617]">
         <section class="py-24 px-12 text-center">
             <h2 class="text-4xl font-bold mb-6">Sovereign Hardware Architecture</h2>
@@ -35,9 +38,16 @@
         </section>
     </main>
 
-    <footer class="py-12 border-t border-slate-800 text-center text-[10px] uppercase tracking-widest text-slate-600">
-        &copy; 2026 Solomon Kin LLC. All Rights Reserved.
-    </footer>
-
+    <script>
+        let current = 0;
+        const images = document.querySelectorAll('.hero-img');
+        setInterval(() => {
+            images[current].classList.remove('opacity-100');
+            images[current].classList.add('opacity-0');
+            current = (current + 1) % images.length;
+            images[current].classList.remove('opacity-0');
+            images[current].classList.add('opacity-100');
+        }, 5000);
+    </script>
 </body>
 </html>
