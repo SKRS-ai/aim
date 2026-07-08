@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); }
+        .grant-gradient { background: linear-gradient(180deg, #020617 0%, #0c1a2e 100%); }
+    </style>
+</head>
+<body class="bg-[#020617] text-slate-200 font-sans grant-gradient min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50 px-12 py-6 flex justify-between items-center border-b border-slate-800">
+        <div class="text-xl font-bold tracking-[0.2em]">GRANT PORTAL <span class="text-[9px] text-cyan-500 block">INSTITUTIONAL ALIGNMENT</span></div>
+        <div class="space-x-8 text-xs font-semibold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-cyan-400">Home</a>
+            <a href="infrastructure.html" class="hover:text-cyan-400">Infrastructure</a>
+            <a href="#" class="text-cyan-400">Grant Portal</a>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-16">
+        <header class="mb-16">
+            <h1 class="text-5xl font-black text-white mb-6">INSTITUTIONAL ALIGNMENT</h1>
+            <p class="text-lg text-slate-400">The REALAiiD Bureau maintains rigorous compliance with federal security and infrastructure mandates. Below is our current alignment matrix for grant-giving agencies.</p>
+        </header>
+
+        <!-- Agency Alignment Matrix -->
+        <section class="mb-16">
+            <table class="w-full border-collapse border border-slate-800 text-sm">
+                <thead>
+                    <tr class="bg-slate-900 text-cyan-500">
+                        <th class="p-4 border border-slate-800 text-left">Agency</th>
+                        <th class="p-4 border border-slate-800 text-left">Focus Area</th>
+                        <th class="p-4 border border-slate-800 text-left">AIM Solution</th>
+                    </tr>
+                </thead>
+                <tbody class="text-slate-300">
+                    <tr>
+                        <td class="p-4 border border-slate-800">NIST</td>
+                        <td class="p-4 border border-slate-800">Cybersecurity Frameworks</td>
+                        <td class="p-4 border border-slate-800">Hardware-bound identity protocols (BioSign™)</td>
+                    </tr>
+                    <tr class="bg-slate-900/20">
+                        <td class="p-4 border border-slate-800">DHS</td>
+                        <td class="p-4 border border-slate-800">Critical Infrastructure Security</td>
+                        <td class="p-4 border border-slate-800">Sentinel Beacon mesh-network resilience</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4 border border-slate-800">DOT/DOE</td>
+                        <td class="p-4 border border-slate-800">Energy & Transit Innovation</td>
+                        <td class="p-4 border border-slate-800">SentryAi harvesting & AVZ throughput</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Briefing Request Form -->
+        <section class="bg-slate-900 p-12 border border-slate-800">
+            <h2 class="text-2xl font-bold mb-6">Request Technical Briefing</h2>
+            <form class="grid md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Agency Name" class="bg-slate-950 border border-slate-700 p-3 w-full">
+                <input type="text" placeholder="Contact Email" class="bg-slate-950 border border-slate-700 p-3 w-full">
+                <select class="bg-slate-950 border border-slate-700 p-3 w-full col-span-2">
+                    <option>Select Inquiry Focus</option>
+                    <option>Sovereign Identity Security</option>
+                    <option>Infrastructure Resilience (AVZs)</option>
+                    <option>Energy Harvesting Tech</option>
+                </select>
+                <textarea placeholder="Specific Requirements / Clearance Context (Optional)" class="bg-slate-950 border border-slate-700 p-3 w-full col-span-2 h-32"></textarea>
+                <button class="bg-cyan-600 px-8 py-4 font-bold col-span-2 hover:bg-cyan-500">SUBMIT BRIEFING REQUEST</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="py-12 text-center text-[10px] uppercase text-slate-600 border-t border-slate-800">
+        &copy; 2026 Solomon Kin LLC. Grant Portal Secured.
+    </footer>
+
+</body>
+</html>
