@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .glass { background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); }
+        .terra-bg { background: radial-gradient(circle at center, #082f49 0%, #020617 70%); }
+    </style>
+</head>
+<body class="bg-[#020617] text-slate-200 font-sans terra-bg h-screen overflow-hidden">
+
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50 px-12 py-6 flex justify-between items-center border-b border-slate-800">
+        <div class="text-xl font-bold tracking-[0.2em]">TERRA TWIN <span class="text-[9px] text-cyan-500 block">LIVE DIGITAL TWIN INTERFACE</span></div>
+        <div class="space-x-8 text-xs font-semibold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-cyan-400">Home</a>
+            <a href="infrastructure.html" class="hover:text-cyan-400">Infrastructure</a>
+            <a href="#" class="text-cyan-400">Terra Twin</a>
+            <a href="#" class="bg-yellow-600/20 text-yellow-500 border border-yellow-600 px-4 py-2">Logos Console</a>
+        </div>
+    </nav>
+
+    <main class="h-full flex flex-col items-center justify-center p-6">
+        
+        <!-- Prestige Hero: Digital Twin Simulation -->
+        <div class="relative w-full max-w-5xl aspect-video border border-cyan-900/50 bg-black/40 flex items-center justify-center mb-8">
+            <!-- Place 3D WebGL or high-fidelity animation here -->
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-white mb-2">LIVE GLOBAL MESH</h1>
+                <p class="text-cyan-500 tracking-[0.3em] uppercase text-xs">Synchronizing physical nodes to digital twin state...</p>
+            </div>
+            <div class="absolute inset-0 border-2 border-cyan-500/20 animate-pulse pointer-events-none"></div>
+        </div>
+
+        <section class="max-w-4xl text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Autonomy-Oriented Digital Twin (AODT)</h2>
+            <p class="text-lg text-slate-400 leading-relaxed mb-8">
+                Terra is the high-integrity operational layer for the REALAiiD ecosystem. It provides real-time telemetry, predictive logistics, and sovereign identity management. 
+                Unlike conventional metaverses, Terra serves as a critical utility for monitoring autonomous assets, climate telemetry, and mesh-network stability.
+            </p>
+            <div class="flex gap-6 justify-center">
+                <div class="border border-slate-700 px-6 py-3 text-xs">NODE SYNC: ACTIVE</div>
+                <div class="border border-slate-700 px-6 py-3 text-xs">IDENTITY PROTOCOL: VERIFIED</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="absolute bottom-0 w-full py-6 text-center text-[10px] uppercase text-slate-600">
+        &copy; 2026 Solomon Kin LLC. Authorized Gateway Only.
+    </footer>
+
+</body>
+</html>
